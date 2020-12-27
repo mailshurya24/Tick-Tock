@@ -16,12 +16,14 @@ function draw() {
   mnAngle = map(mn,0,60,0,360);
   hrAngle = map(hr % 12,0,12,0,360);
 
+  translate(400,200);
+
   //seconds hand
   push();
   rotate(scAngle);
   stroke(255,0,0);
   strokeWeight(7);
-  line(400,200,100,200);
+  line(0,0,75,0);
   pop();
 
   //minute hand
@@ -29,7 +31,7 @@ function draw() {
   rotate(mnAngle);
   stroke(0,255,0);
   strokeWeight(7);
-  line(400,200,70,0);
+  line(0,0,75,50);
   pop();
 
   //hour hand
@@ -37,7 +39,7 @@ function draw() {
   rotate(hrAngle);
   stroke(0,0,255);
   strokeWeight(7);
-  line(400,200,50,0);
+  line(0,0,75,0);
   pop();
 
   drawSprites();
